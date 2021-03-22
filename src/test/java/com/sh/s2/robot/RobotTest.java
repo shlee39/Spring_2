@@ -1,4 +1,4 @@
-package com.sh.s2;
+package com.sh.s2.robot;
 
 import static org.junit.Assert.*;
 
@@ -10,15 +10,17 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = {"file:src/main/webapp/WEB-INF/spring/**/*-context.xml"})
-public class MyTestCase {
-	
+public class RobotTest {
+
 	@Autowired
-	private Car car;
-	
+	private Robot robot;
 	
 	@Test
-	public void test1() {
-		System.out.println(car.getEngine().getFuel());
+	public void test() {
+		//left_arm의 name
+		System.out.println(robot.getArm_Left().getName());
+		//right_arm의 name
+		System.out.println(robot.getArm_Right().getName());
 	}
 
 }
